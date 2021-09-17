@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Shop</title>
+
+    <link href='./styles.css' type='text/css' rel='stylesheet' />
+
+    <script src="https://kit.fontawesome.com/fd02cabae2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="myCart" class="cart">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h1>Cart</h1>
+        <div class='cart-items'></div>
+        <h3 id='total'>Total: $0</h3>
+    </div>
+    <!-- <span onclick="openNav()">open</span> -->
+    <header class='page-header'>
+        <h4>The Mood Shop</h4>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href='#items'>Shop</a></li>
+                <li onclick="openNav()"><a id='cart-display' href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id='home'>
+        <div>
+            <h1>
+                Discover Mood Merch
+            </h1>
+            <h2>
+                It's not just merch, it's a lifestyle
+            </h2>
+            <button onclick="scrollToItems()">
+                Start Shopping
+            </button>
+        </div>
+        <image src='./assets/images/calm_woman.gif' />
+    </div>
+    <div class='items' id='items'></div>
+    <div class='modal' id='itemsModal'>
+        <div class='modal-content' id='modal-content'>
+            <span onclick="closeModal()" class="close">&times;</span>
+        </div>
+    </div>
+    <script>
+        const scrollToItems = () => {
+            window.location.hash = ''
+            window.location.hash = 'items'
+        }
+
+        const openNav = () => {
+            document.getElementById('myCart').style.width = '640px'
+        }
+
+        const closeNav = () => {
+            document.getElementById('myCart').style.width = '0'
+        }
+
+        const closeModal = () => {
+            document.getElementById('itemsModal').style.display = 'none'
+
+            //erase current modal
+            document.getElementById('modal-item').remove()
+
+            //enable body scrolling
+            document.querySelector("body").style.overflow = 'auto';
+        }
+    </script>
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
