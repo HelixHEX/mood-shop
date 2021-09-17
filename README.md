@@ -8,7 +8,7 @@
     * Increase/Reduce Quantity
     * Remove items from cart
 
-## Screenshots]
+## Screenshots
 ![Screen Shot 2021-09-16 at 9.59.44 PM](https://github.com/HelixHEX/mood-shop/blob/main/assets/images/demo/Screen%20Shot%202021-09-16%20at%209.59.44%20PM.png)
 
 ![Screen Shot 2021-09-16 at 10.00.21 PM](https://github.com/HelixHEX/mood-shop/blob/main/assets/images/demo/Screen%20Shot%202021-09-16%20at%2010.00.21%20PM.png)
