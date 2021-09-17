@@ -54,11 +54,11 @@ const reduceQuant = (index) => {
                 document.getElementById('myCart').style.width = '0'
             }
             cart.splice(index, 1)
-
+            updateCart()
         } else {
             cart[index].quantity -= 1
+            updateCart()
         }
-        updateCart()
     }
 }
 
@@ -210,7 +210,7 @@ data.forEach((item, index) => {
 });
 
 //display cart
-const displayCart = () => {
+const displayCart = (refresh, itemIndex) => {
     // const container = document.createElement('div')
     cart.forEach((item, index) => {
         const newDiv = document.createElement('div')
@@ -230,6 +230,7 @@ const displayCart = () => {
         itemText.innerText = `${index + 1}. ${newname} - ${price} (${item.quantity})`
         itemText.className = 'item-info'
         itemText.id = `item-${index}`
+
         //increase quantity
         const addQuant = document.createElement('button')
         addQuant.innerHTML = '+'
